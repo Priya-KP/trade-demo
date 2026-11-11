@@ -14,8 +14,8 @@ public class TradeService {
     public TradeService() {
         trades.add(new Trade(
                 "T1001", "A999", "EUR/USD", "BUY",
-                new BigDecimal("1000000"), new BigDecimal("1.10")
-        ));
+                new BigDecimal("1000000"), new BigDecimal("1.10"),
+                "PROCESSED"));
     }
 
     public List<Trade> getAllTrades() {
@@ -23,7 +23,14 @@ public class TradeService {
     }
 
     public Trade addTrade(Trade trade) {
-        trades.add(trade);
+        trades.add(new Trade(
+                trade.tradeId(),
+                trade.accountId(),
+                trade.currencyPair(),
+                trade.side(),
+                trade.amount(),
+                trade.rate(),
+                trade.status()));
         return trade;
     }
 }
