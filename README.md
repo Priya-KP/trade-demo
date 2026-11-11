@@ -30,3 +30,5 @@ Example JSON:
   "rate": 1.27
 }
 ```
+
+Remote change for Git pull practice.
