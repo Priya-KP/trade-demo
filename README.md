@@ -32,3 +32,5 @@ Example JSON:
 ```
 
 Remote change for Git pull practice.
+
+Remote version of the Git practice note.
